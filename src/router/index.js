@@ -43,10 +43,19 @@ const routes = [
     component: () =>
       import(/*webpackChunkName: "Hawaii"*/ "../views/Hawaii.vue"),
   },
+  {
+    path: "/details",
+    name: "DestinationDetails",
+    component: () =>
+      import(
+        /*webpackChunkName: "DestinationDetails"*/ "../views/DestinationDetails.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
-  // this is the class is applied to active link > define the class in your css code
+  // this i s the class is applied to active link >
+  // define the class in your css code
   linkActiveClass: "vue-school-active-class",
   routes,
 });

@@ -24,7 +24,8 @@
   padding: 0 10px;
 }
 
-/* vue-school-active-class this is the class dynalically added to active link  */
+/* vue-school-active-class this is the class 
+dynalically added to active link  */
 #nav a.vue-school-active-class {
   color: #d8842b;
 }
