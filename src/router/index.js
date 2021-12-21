@@ -46,6 +46,8 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  // this is the class is applied to active link > define the class in your css code
+  linkActiveClass: "vue-school-active-class",
   routes,
 });
 
