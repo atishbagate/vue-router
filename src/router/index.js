@@ -1,10 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Brazil from "../views/Brazil.vue";
-import Panama from "../views/Panama.vue";
-import Jamaica from "../views/Jamaica.vue";
-import Hawaii from "../views/Hawaii.vue";
 
 Vue.use(VueRouter);
 
@@ -26,22 +22,26 @@ const routes = [
   {
     path: "/Brazil",
     name: "Brazil",
-    component: Brazil,
+    component: () =>
+      import(/*webpackChunkName: "Brazil"*/ "../views/Brazil.vue"),
   },
   {
     path: "/Panama",
     name: "Panama",
-    component: Panama,
+    component: () =>
+      import(/*webpackChunkName: "Panama"*/ "../views/Panama.vue"),
   },
   {
     path: "/Jamaica",
     name: "Jamaica",
-    component: Jamaica,
+    component: () =>
+      import(/*webpackChunkName: "Jamaica"*/ "../views/Jamaica.vue"),
   },
   {
     path: "/Hawaii",
     name: "Hawaii",
-    component: Hawaii,
+    component: () =>
+      import(/*webpackChunkName: "Hawaii"*/ "../views/Hawaii.vue"),
   },
 ];
 
