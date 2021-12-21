@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>All Destinations</h1>
+    <h1>All Destinations for Trip</h1>
     <div class="destinations">
       <div v-for="destinations in destinations" :key="destinations.id">
         <router-link :to="destinations.slug">
