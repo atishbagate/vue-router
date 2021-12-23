@@ -44,7 +44,8 @@ const routes = [
       import(/*webpackChunkName: "Hawaii"*/ "../views/Hawaii.vue"),
   },
   {
-    path: "/details",
+    // :id declares the dynamic content from the path
+    path: "/details/:id",
     name: "DestinationDetails",
     component: () =>
       import(
