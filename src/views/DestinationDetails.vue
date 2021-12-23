@@ -15,7 +15,7 @@ import store from "@/store.js";
 export default {
   data() {
     return {
-      destinationId: this.$route.params.id,
+      slug: this.$route.params.slug,
     };
   },
   // we can use computer property to show which destination to show.
@@ -23,7 +23,7 @@ export default {
   computed: {
     destination() {
       return store.destinations.find(
-        (destination) => destination.id === this.destinationId
+        (destination) => destination.slug === this.slug
       );
     },
   },

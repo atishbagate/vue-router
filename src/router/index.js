@@ -11,8 +11,8 @@ const routes = [
     component: Home,
   },
   {
-    // :id declares the dynamic content from the path
-    path: "/details/:id",
+    // what if our url has name of page insted of id. -> :slug
+    path: "/details/:slug",
     name: "DestinationDetails",
     component: () =>
       import(
@@ -25,6 +25,8 @@ const router = new VueRouter({
   // this i s the class is applied to active link >
   // define the class in your css code
   linkActiveClass: "vue-school-active-class",
+  //  mode:"history", will remove the # from url
+  mode: "history",
   routes,
 });
 
