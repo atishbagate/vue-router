@@ -9,15 +9,28 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    props: true,
   },
   {
     // what if our url has name of page insted of id. -> :slug
-    path: "/details/:slug",
+    path: "/Destination/:slug",
     name: "DestinationDetails",
+    props: true,
     component: () =>
       import(
         /*webpackChunkName: "DestinationDetails"*/ "../views/DestinationDetails.vue"
       ),
+    children: [
+      {
+        path: ":exprianceSlug",
+        name: "exprianceDetails",
+        props: true,
+        component: () =>
+          import(
+            /*webpackChunkName: "exprianceDetails"*/ "../views/ExperianceDetailsPage.vue"
+          ),
+      },
+    ],
   },
 ];
 
