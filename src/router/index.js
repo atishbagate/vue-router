@@ -44,6 +44,7 @@ const routes = [
     },
   },
   {
+    // this is for vue 2 . in vue 3 the path address changed to    path: "/:pathMatch(.*)*"
     path: "/404",
     alias: "*",
     name: "NotFound404",
