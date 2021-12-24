@@ -1,6 +1,5 @@
 <template>
   <section class="sec">
-    <h2>Destination place</h2>
     <h1>{{ expriance.name }}</h1>
     <div class="expriance-details">
       <img
@@ -48,6 +47,7 @@ export default {
 .expriance-details {
   display: flex;
   justify-content: space-between;
+  padding: 40px 0;
 }
 p {
   margin: 0 40px;

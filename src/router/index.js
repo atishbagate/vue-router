@@ -58,6 +58,24 @@ const router = new VueRouter({
   linkActiveClass: "vue-school-active-class",
   //  mode:"history", will remove the # from url
   mode: "history",
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      const position = {};
+      // to simulate the scroll behaviors
+      if (to.hash) {
+        position.selector = to.hash;
+        if (to.hash === "#expriance") {
+          position.offset = { y: 140 };
+        }
+        if (document.querySelector(to.hash)) {
+          return position;
+        }
+        return false;
+      }
+    }
+  },
   routes,
 });
 
