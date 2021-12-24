@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <TheNavigation />
-    <router-view :key="$route.path" />
+    <transition name="slide" mode="out-in">
+      <router-view :key="$route.path" />
+    </transition>
     <!-- <Home /> -->
   </div>
 </template>
@@ -21,5 +23,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+/* //this is the class name of slide for transition (custome class -> slide)
+there are 6 total classes given by vue to define transition  */
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
 }
 </style>
